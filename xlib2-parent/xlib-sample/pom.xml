@@ -13,7 +13,18 @@
     <packaging>pom</packaging>
     <modules>
         <module>xlib-web-sample</module>
+        <module>xlib-jvm</module>
     </modules>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.32</version>
+        </dependency>
+
+    </dependencies>
 
 
 </project>
