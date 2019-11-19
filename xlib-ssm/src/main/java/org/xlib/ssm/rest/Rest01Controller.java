@@ -1,6 +1,7 @@
 package org.xlib.ssm.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -12,9 +13,10 @@ import java.util.Map;
  * @description:
  **/
 @RestController
-public class DeController {
+@RequestMapping(value = "/rest01")
+public class Rest01Controller {
 
-    @GetMapping("/de1")
+    @GetMapping("/de01")
     public Object getD1(){
         Map<String,Object> result = new HashMap<>();
         result.put("status",true);
