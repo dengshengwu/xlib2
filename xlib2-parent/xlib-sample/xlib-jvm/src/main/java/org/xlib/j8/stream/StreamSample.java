@@ -39,28 +39,42 @@ public class StreamSample {
     }
 
 
+    public void forEachPrint(List<ItemInfo> list){
+        list.forEach((itemInfo -> {
+            System.out.println(JSON.toJSONString(itemInfo));
+        }));
+    }
+
+
     public void sort() {
         List<ItemInfo> list = init(9);
         List<ItemInfo> listSort = list.stream()
                 .sorted(Comparator.comparing(ItemInfo::getItemCode))
                 .sorted(Comparator.comparing(ItemInfo::getItemId).reversed())
-                .sorted(Comparator.comparing(ItemInfo::getPrices))
+                .sorted(Comparator.comparing(ItemInfo::getRecordStatus))
                 .collect(Collectors.toList());
-        System.out.println(JSON.toJSONString(listSort));
+        forEachPrint(listSort);
     }
 
-    public void filter(){
+    public void filter() {
         List<ItemInfo> list = init(9);
-        List<ItemInfo> listSort = list.stream()
+        List<ItemInfo> listFilter = list.stream()
                 .filter(item -> {
-                    return item.getRecordStatus() == RecordStatus.N;
+                    return item.getRecordStatus() == RecordStatus.F;
                 })
+                .filter(itemInfo -> itemInfo.getPrices() > 3)
+                .limit(2)
                 .collect(Collectors.toList());
-        System.out.println(JSON.toJSONString(listSort));
+        forEachPrint(listFilter);
     }
 
-
-
-
+    public void map(){
+        List<ItemInfo> list = init(9);
+        List<Integer> listMap = list.stream()
+                .map(ItemInfo::getItemCode)
+                .map(String::length)
+                .collect(Collectors.toList());
+        listMap.forEach((s) -> System.out.println(s));
+    }
 
 }

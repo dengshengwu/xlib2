@@ -22,4 +22,9 @@ public class StreamSampleTest {
     public void testFilter() {
         streamSample.filter();
     }
+
+    @Test
+    public void testMap(){
+        streamSample.map();
+    }
 }
