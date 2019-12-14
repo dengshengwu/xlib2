@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  **/
 public class ForEachDemo {
     public static void main(String[] args) {
-        List<String> strings = List.of("Apple", "bug", "ABC", "Dog");
+        List<String> strings = null;
         strings.forEach((s) -> System.out.println(s));
 
         List<String> listA = strings.stream()

@@ -14,6 +14,7 @@
     <modules>
         <module>xlib-web-sample</module>
         <module>xlib-jvm</module>
+        <module>user-apa-utils</module>
     </modules>
 
     <dependencies>
