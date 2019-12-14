@@ -1,5 +1,6 @@
 package org.xlib.apa.lang3;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -9,10 +10,77 @@ import org.apache.commons.lang3.ArrayUtils;
  **/
 public class UserArrayUtils {
 
-    public static void fun() {
-        String[] list = null;
+    public static void empty() {
+        String[] list = {};
         System.err.println( ArrayUtils.isNotEmpty(list));
-        System.err.println("你好 Java！");
+    }
+
+
+    public static void add(){
+        String[] list = {};
+        list = ArrayUtils.add(list,"Java");
+        list = ArrayUtils.add(list,"C++");
+        list = ArrayUtils.add(list,"C#");
+        list = ArrayUtils.add(list,"C");
+        System.err.println(JSON.toJSONString(list));
+    }
+
+
+    public static void isSorted(){
+        String[] list = {};
+        list = ArrayUtils.add(list,"Java");
+        list = ArrayUtils.add(list,"C++");
+        list = ArrayUtils.add(list,"C#");
+        list = ArrayUtils.add(list,"C");
+        System.err.println(JSON.toJSONString(list));
+        System.err.println(JSON.toJSONString(ArrayUtils.isSorted(list)));
+    }
+
+    public static void fun003(){
+
+    }
+
+
+
+    public static void fun004(){
+
+
+    }
+
+
+
+    public static void fun005(){
+
+
+    }
+
+
+    public static void fun006(){
+
+
+    }
+
+
+
+    public static void fun007(){
+
+
+    }
+
+
+    public static void fun008(){
+
+
+    }
+
+    public static void fun009(){
+
+
+    }
+
+    public static void fun010(){
+
+
     }
 
 

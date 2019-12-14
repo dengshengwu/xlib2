@@ -3,30 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>xlib2-parent</artifactId>
+        <artifactId>xlib-sample</artifactId>
         <groupId>org.xlib</groupId>
         <version>2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xlib-sample</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>xlib-web-sample</module>
-        <module>xlib-jvm</module>
-        <module>user-apa-utils</module>
-        <module>user-netty-all</module>
-    </modules>
+    <artifactId>user-netty-all</artifactId>
 
     <dependencies>
-
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.32</version>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
         </dependency>
-
     </dependencies>
-
 
 </project>

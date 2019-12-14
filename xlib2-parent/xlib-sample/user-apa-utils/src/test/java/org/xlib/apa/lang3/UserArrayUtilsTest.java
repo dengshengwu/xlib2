@@ -7,7 +7,20 @@ import static org.junit.Assert.*;
 public class UserArrayUtilsTest {
 
     @Test
-    public void fun() {
-        UserArrayUtils.fun();
+    public void userEmpty() {
+        UserArrayUtils.empty();
     }
+
+    @Test
+    public void add() {
+        UserArrayUtils.add();
+    }
+
+    @Test
+    public void isSorted() {
+        UserArrayUtils.isSorted();
+    }
+
+
+
 }
