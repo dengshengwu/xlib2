@@ -15,6 +15,7 @@ public class Student implements Serializable {
     private String stuName;
     private Integer score;
     private String className;
+    private Long total;
 
     public Student(Integer sid, String stuName, Integer score, String className) {
         this.sid = sid;

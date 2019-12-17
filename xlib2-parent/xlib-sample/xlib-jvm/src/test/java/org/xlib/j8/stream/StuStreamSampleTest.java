@@ -30,4 +30,28 @@ public class StuStreamSampleTest {
         sample.mapToInt();
     }
 
+    @Test
+    public void flatMap() {
+        sample.flatMap();
+    }
+
+    @Test
+    public void anyMatch(){
+        sample.anyMatch();
+    }
+
+    @Test
+    public void reduce(){
+        sample.reduce();
+    }
+
+    @Test
+    public void counting() {
+        sample.counting();
+    }
+
+    @Test
+    public void groupBy(){
+        sample.groupBy();
+    }
 }
