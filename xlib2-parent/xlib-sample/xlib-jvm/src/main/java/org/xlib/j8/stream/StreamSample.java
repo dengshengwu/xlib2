@@ -15,6 +15,37 @@ import java.util.stream.Collectors;
  * @description:
  **/
 public class StreamSample {
+    /**
+     * （1）条件过滤
+     *
+     * （2）排序
+     *
+     * （3）分组
+     *
+     * （4）筛选指定的列
+     *
+     * （5）最大值，最小值，平均值，求和，累加
+     *
+     *
+     * （6）跨列求和或计算
+     *
+     * （7）集合运算：交，并（去重），差，
+     *
+     * （8）多集合关联
+     *
+     *
+     *
+     *
+     */
+
+
+
+
+
+
+
+
+
     private List<ItemInfo> init(int initialCapacity) {
         List<ItemInfo> list = new ArrayList<>();
         for (int i = 1; i <= 9; i++) {
@@ -46,6 +77,9 @@ public class StreamSample {
     }
 
 
+    /**
+     * 流式排序
+     */
     public void sort() {
         List<ItemInfo> list = init(9);
         List<ItemInfo> listSort = list.stream()
@@ -56,6 +90,9 @@ public class StreamSample {
         forEachPrint(listSort);
     }
 
+    /**
+     * 数据过滤
+     */
     public void filter() {
         List<ItemInfo> list = init(9);
         List<ItemInfo> listFilter = list.stream()
@@ -68,13 +105,24 @@ public class StreamSample {
         forEachPrint(listFilter);
     }
 
+    /**
+     * 数据结果集处理
+     */
     public void map(){
         List<ItemInfo> list = init(9);
-        List<Integer> listMap = list.stream()
+        List<String> listMap = list.stream()
                 .map(ItemInfo::getItemCode)
-                .map(String::length)
                 .collect(Collectors.toList());
         listMap.forEach((s) -> System.out.println(s));
+    }
+
+
+    public void maxMin(){
+        List<ItemInfo> list = init(9);
+        ItemInfo maxItemInfo = list.stream().max(Comparator.comparing(ItemInfo::getItemId)).get();
+        ItemInfo minItemInfo = list.stream().min(Comparator.comparing(ItemInfo::getItemId)).get();
+        System.err.println(minItemInfo);
+        System.err.println(maxItemInfo);
     }
 
 }

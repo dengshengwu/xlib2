@@ -11,15 +11,13 @@ import java.io.Serializable;
  **/
 @Data
 public class Student implements Serializable {
+    private Integer sid;
     private String stuName;
-    private int score;
+    private Integer score;
     private String className;
 
-    public Student() {
-
-    }
-
-    public Student(String stuName, int score, String className) {
+    public Student(Integer sid, String stuName, Integer score, String className) {
+        this.sid = sid;
         this.stuName = stuName;
         this.score = score;
         this.className = className;

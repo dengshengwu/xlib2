@@ -27,4 +27,9 @@ public class StreamSampleTest {
     public void testMap(){
         streamSample.map();
     }
+
+    @Test
+    public void maxMin(){
+        streamSample.maxMin();
+    }
 }
