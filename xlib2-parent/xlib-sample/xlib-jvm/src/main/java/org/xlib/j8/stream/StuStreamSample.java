@@ -199,8 +199,6 @@ public class StuStreamSample {
         Map<String, List<Student>> collect = stuList.stream()
                 .collect(Collectors.groupingBy(s -> s.getClassName() + "," + s.getScore() ));
 
-        collect.forEach((k,v) -> {
-            System.err.println(k + "--->" + v);
-        });
+        collect.forEach((k,v) -> System.err.println(k + "--->" + v));
     }
 }
