@@ -16,6 +16,7 @@
         <module>xlib-jvm</module>
         <module>user-apa-utils</module>
         <module>user-netty-all</module>
+        <module>user-h2</module>
     </modules>
 
     <dependencies>

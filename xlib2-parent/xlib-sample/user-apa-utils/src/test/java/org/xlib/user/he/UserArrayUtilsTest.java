@@ -1,8 +1,6 @@
-package org.xlib.apa.lang3;
+package org.xlib.user.he;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class UserArrayUtilsTest {
 

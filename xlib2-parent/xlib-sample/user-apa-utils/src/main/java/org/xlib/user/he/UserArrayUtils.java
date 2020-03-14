@@ -1,4 +1,4 @@
-package org.xlib.apa.lang3;
+package org.xlib.user.he;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.ArrayUtils;
@@ -15,7 +15,6 @@ public class UserArrayUtils {
         System.err.println( ArrayUtils.isNotEmpty(list));
     }
 
-
     public static void add(){
         String[] list = {};
         list = ArrayUtils.add(list,"Java");
@@ -28,10 +27,10 @@ public class UserArrayUtils {
 
     public static void isSorted(){
         String[] list = {};
-        list = ArrayUtils.add(list,"Java");
-        list = ArrayUtils.add(list,"C++");
-        list = ArrayUtils.add(list,"C#");
-        list = ArrayUtils.add(list,"C");
+        list = ArrayUtils.add(list,"3Java");
+        list = ArrayUtils.add(list,"2C++");
+        list = ArrayUtils.add(list,"1C#");
+        list = ArrayUtils.add(list,"0C");
         System.err.println(JSON.toJSONString(list));
         System.err.println(JSON.toJSONString(ArrayUtils.isSorted(list)));
     }
